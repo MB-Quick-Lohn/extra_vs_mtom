@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<soapenv:Envelope xmlns:xcpt="http://www.extra-standard.de/namespace/components/1"
+                  xmlns:xplg="http://www.extra-standard.de/namespace/plugins/1"
+                  xmlns:xreq="http://www.extra-standard.de/namespace/request/1"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:inc="http://www.w3.org/2004/08/xop/include"
+                  xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ ../../xsd_mtom/xsd_KomServer_1_request_senden_datenlieferungen_mtom.xsd">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <xreq:Transport profile="http://www.extra-standard.de/profile/DEUEVGKV/1.4" version="1.4">
+            <xreq:TransportHeader>
+                <xcpt:Sender>
+                    <xcpt:SenderID>12345671</xcpt:SenderID>
+                </xcpt:Sender>
+                <xcpt:Receiver>
+                    <xcpt:ReceiverID>19878051</xcpt:ReceiverID>
+                </xcpt:Receiver>
+                <xcpt:RequestDetails>
+                    <xcpt:RequestID>Request-AG-2019-04-25T11:00:00</xcpt:RequestID>
+                    <xcpt:TimeStamp>2019-04-25T11:00:00</xcpt:TimeStamp>
+                    <xcpt:Application>
+                        <xcpt:Product>XML Beispieldaten V1.0</xcpt:Product>
+                        <xcpt:Manufacturer>ITSG GmbH</xcpt:Manufacturer>
+                    </xcpt:Application>
+                </xcpt:RequestDetails>
+            </xreq:TransportHeader>
+            <xreq:TransportBody>
+                <xreq:Package>
+                    <xreq:PackageHeader>
+                        <xcpt:TestIndicator>http://www.extra-standard.de/test/NONE</xcpt:TestIndicator>
+                        <xcpt:Sender>
+                            <xcpt:SenderID>12345671</xcpt:SenderID>
+                        </xcpt:Sender>
+                        <xcpt:Receiver>
+                            <xcpt:ReceiverID>01000262</xcpt:ReceiverID>
+                        </xcpt:Receiver>
+                        <xcpt:RequestDetails>
+                            <xcpt:RequestID>Request-AG-P1-2019-04-25T11:00:00</xcpt:RequestID>
+                            <xcpt:TimeStamp>2019-04-25T11:00:00</xcpt:TimeStamp>
+                            <xcpt:Procedure>EEL</xcpt:Procedure>
+                            <xcpt:DataType>http://kommunikationsserver.itsg.de/meldung</xcpt:DataType>
+                        </xcpt:RequestDetails>
+                    </xreq:PackageHeader>
+                    <xreq:PackagePlugIns>
+                        <xplg:Contacts>
+                            <xplg:SenderContact>
+                                <xplg:Endpoint type="SMTP">Ansprechpartner@MusterAG.itsg.de</xplg:Endpoint>
+                            </xplg:SenderContact>
+                        </xplg:Contacts>
+                        <xplg:DataTransforms>
+                            <xplg:Compression order="1">
+                                <xplg:Algorithm id="http://www.extra-standard.de/transforms/compression/gzip"/>
+                                <xplg:InputData bytes="1349"/>
+                            </xplg:Compression>
+                            <xplg:Encryption order="2">
+                                <xplg:Algorithm id="http://www.extra-standard.de/transforms/encryption/PKCS7"/>
+                                <xplg:OutputData bytes="4223"/>
+                            </xplg:Encryption>
+                        </xplg:DataTransforms>
+                        <xplg:DataSource>
+                            <xplg:DataContainer type="http://www.extra-standard.de/container/FILE" name="EEEL0000001"
+                                                created="2019-04-25T11:00:00" encoding="I1"/>
+                        </xplg:DataSource>
+                    </xreq:PackagePlugIns>
+                    <xreq:PackageBody>
+                        <xcpt:Data>
+                            <xcpt:Base64CharSequence>
+                                <inc:Include href="cid:20161004155623000002999"/>
+                            </xcpt:Base64CharSequence>
+                        </xcpt:Data>
+                    </xreq:PackageBody>
+                </xreq:Package>
+            </xreq:TransportBody>
+        </xreq:Transport>
+    </soapenv:Body>
+</soapenv:Envelope>
+--MIME-Multipart-Boundary
+Content-Type: application/octet-stream
+Content-Length: 1000
+Content-Id: 20161004155623000002999
+Content-Transfer-Encoding: binary
+
+{NUTZDATEN}
+--MIME-Multipart-Boundary--

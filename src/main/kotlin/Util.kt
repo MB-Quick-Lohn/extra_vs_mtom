@@ -1,0 +1,1 @@
+fun log(any: Any? = "") = println(any)

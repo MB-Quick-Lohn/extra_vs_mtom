@@ -1,0 +1,188 @@
+/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=62992:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -classpath /Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/ext/openjsse.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/lib/dt.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/zulu8.42.0.23-ca-jdk8.0.232-macosx_x64/lib/tools.jar:/Users/calliduslynx/Workspace/MTOMvsXTRA/build/classes/kotlin/main:/Users/calliduslynx/Workspace/MTOMvsXTRA/build/resources/main:/Users/calliduslynx/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.4.10/998caa30623f73223194a8b657abd2baec4880ea/kotlin-stdlib-jdk8-1.4.10.jar:/Users/calliduslynx/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.4.10/30e46450b0bb3dbf43898d2f461be4a942784780/kotlin-stdlib-jdk7-1.4.10.jar:/Users/calliduslynx/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.4.10/ea29e063d2bbe695be13e9d044dcfb0c7add398e/kotlin-stdlib-1.4.10.jar:/Users/calliduslynx/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.4.10/6229be3465805c99db1142ad75e6c6ddeac0b04c/kotlin-stdlib-common-1.4.10.jar:/Users/calliduslynx/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar MainKt
+ Vergleich der verschiedenen Übertragungsformate zu den Kommunikations-Servern
+-------------------------------------------------------------------------------
+
+Hinweise: Die Verschlüsselung und Signierung entspricht nicht den Anforderungen
+          der GG. Hier wurde stattdessen eine einfache Passwort-Verschlüsselung
+          genutzt, die die Resultate aber nicht entscheidend beeinflussen sollte.
+
+          Größe des Transport XML   (normal / minified)
+                   eXTra:      3.563 bytes /      2.432 bytes 
+                    MTOM:      4.559 bytes /      2.855 bytes 
+
+
+
+====================================================================================================================================================================================
+===== Nutzdaten: vsnrabfrage.txt (Eine einzelne Versicherungsnummern-Abfrage)
+  Größe:        756 bytes
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type  | ND-Komprimierung | XML minify | HTTP-Komprimierung ||| Reine Nutzdaten (ggf. komprimiert) | Nutzdaten im Endformat | Vollst. XML inkl. ND | Vollst. HTTP Request |
++-------+------------------+------------+--------------------+++------------------------------------+------------------------+----------------------+----------------------+
+| Extra |       NONE       |     Off    |          NONE      |||                          760 bytes |            1.016 bytes |          4.579 bytes |          4.579 bytes |
+| MTOM  |       NONE       |     Off    |          NONE      |||                          760 bytes |              760 bytes |          5.319 bytes |          5.319 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       NONE       |     On     |          NONE      |||                          760 bytes |            1.016 bytes |          3.448 bytes |          3.448 bytes |
+| MTOM  |       NONE       |     On     |          NONE      |||                          760 bytes |              760 bytes |          3.615 bytes |          3.615 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       GZIP       |     On     |          NONE      |||                          225 bytes |              300 bytes |          2.732 bytes |          2.732 bytes |
+| MTOM  |       GZIP       |     On     |          NONE      |||                          225 bytes |              225 bytes |          3.080 bytes |          3.080 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       NONE       |     On     |          GZIP      |||                          760 bytes |            1.016 bytes |          3.448 bytes |          1.344 bytes |
+| MTOM  |       NONE       |     On     |          GZIP      |||                          760 bytes |              760 bytes |          3.615 bytes |          1.569 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       GZIP       |     On     |          GZIP      |||                          225 bytes |              300 bytes |          2.732 bytes |          1.094 bytes |
+| MTOM  |       GZIP       |     On     |          GZIP      |||                          225 bytes |              225 bytes |          3.080 bytes |          1.336 bytes |
++-------+------------------+------------+--------------------+++------------------------------------+------------------------+----------------------+----------------------+
+
+
+
+====================================================================================================================================================================================
+===== Nutzdaten: dua-klein.txt (10x 10er Anmeldung)
+  Größe:     10.505 bytes
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type  | ND-Komprimierung | XML minify | HTTP-Komprimierung ||| Reine Nutzdaten (ggf. komprimiert) | Nutzdaten im Endformat | Vollst. XML inkl. ND | Vollst. HTTP Request |
++-------+------------------+------------+--------------------+++------------------------------------+------------------------+----------------------+----------------------+
+| Extra |       NONE       |     Off    |          NONE      |||                       10.512 bytes |           14.016 bytes |         17.579 bytes |         17.579 bytes |
+| MTOM  |       NONE       |     Off    |          NONE      |||                       10.512 bytes |           10.512 bytes |         15.071 bytes |         15.071 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       NONE       |     On     |          NONE      |||                       10.512 bytes |           14.016 bytes |         16.448 bytes |         16.448 bytes |
+| MTOM  |       NONE       |     On     |          NONE      |||                       10.512 bytes |           10.512 bytes |         13.367 bytes |         13.367 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       GZIP       |     On     |          NONE      |||                          503 bytes |              672 bytes |          3.104 bytes |          3.104 bytes |
+| MTOM  |       GZIP       |     On     |          NONE      |||                          503 bytes |              503 bytes |          3.358 bytes |          3.358 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       NONE       |     On     |          GZIP      |||                       10.512 bytes |           14.016 bytes |         16.448 bytes |          2.780 bytes |
+| MTOM  |       NONE       |     On     |          GZIP      |||                       10.512 bytes |           10.512 bytes |         13.367 bytes |          2.113 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       GZIP       |     On     |          GZIP      |||                          503 bytes |              672 bytes |          3.104 bytes |          1.374 bytes |
+| MTOM  |       GZIP       |     On     |          GZIP      |||                          503 bytes |              503 bytes |          3.358 bytes |          1.582 bytes |
++-------+------------------+------------+--------------------+++------------------------------------+------------------------+----------------------+----------------------+
+
+
+
+====================================================================================================================================================================================
+===== Nutzdaten: dua-mittel.txt (1000x 10er Anmeldung)
+  Größe:     99.785 bytes
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type  | ND-Komprimierung | XML minify | HTTP-Komprimierung ||| Reine Nutzdaten (ggf. komprimiert) | Nutzdaten im Endformat | Vollst. XML inkl. ND | Vollst. HTTP Request |
++-------+------------------+------------+--------------------+++------------------------------------+------------------------+----------------------+----------------------+
+| Extra |       NONE       |     Off    |          NONE      |||                       99.792 bytes |          133.056 bytes |        136.619 bytes |        136.619 bytes |
+| MTOM  |       NONE       |     Off    |          NONE      |||                       99.792 bytes |           99.792 bytes |        104.351 bytes |        104.351 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       NONE       |     On     |          NONE      |||                       99.792 bytes |          133.056 bytes |        135.488 bytes |        135.488 bytes |
+| MTOM  |       NONE       |     On     |          NONE      |||                       99.792 bytes |           99.792 bytes |        102.647 bytes |        102.647 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       GZIP       |     On     |          NONE      |||                        1.222 bytes |            1.632 bytes |          4.064 bytes |          4.064 bytes |
+| MTOM  |       GZIP       |     On     |          NONE      |||                        1.222 bytes |            1.222 bytes |          4.077 bytes |          4.077 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       NONE       |     On     |          GZIP      |||                       99.792 bytes |          133.056 bytes |        135.488 bytes |          3.690 bytes |
+| MTOM  |       NONE       |     On     |          GZIP      |||                       99.792 bytes |           99.792 bytes |        102.647 bytes |          2.719 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       GZIP       |     On     |          GZIP      |||                        1.222 bytes |            1.632 bytes |          4.064 bytes |          1.397 bytes |
+| MTOM  |       GZIP       |     On     |          GZIP      |||                        1.222 bytes |            1.222 bytes |          4.077 bytes |          1.645 bytes |
++-------+------------------+------------+--------------------+++------------------------------------+------------------------+----------------------+----------------------+
+
+
+
+====================================================================================================================================================================================
+===== Nutzdaten: dua-gross.txt (100000x 10er Anmeldung)
+  Größe:  9.915.383 bytes
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type  | ND-Komprimierung | XML minify | HTTP-Komprimierung ||| Reine Nutzdaten (ggf. komprimiert) | Nutzdaten im Endformat | Vollst. XML inkl. ND | Vollst. HTTP Request |
++-------+------------------+------------+--------------------+++------------------------------------+------------------------+----------------------+----------------------+
+| Extra |       NONE       |     Off    |          NONE      |||                    9.915.384 bytes |       13.220.512 bytes |     13.224.075 bytes |     13.224.075 bytes |
+| MTOM  |       NONE       |     Off    |          NONE      |||                    9.915.384 bytes |        9.915.384 bytes |      9.919.943 bytes |      9.919.943 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       NONE       |     On     |          NONE      |||                    9.915.384 bytes |       13.220.512 bytes |     13.222.944 bytes |     13.222.944 bytes |
+| MTOM  |       NONE       |     On     |          NONE      |||                    9.915.384 bytes |        9.915.384 bytes |      9.918.239 bytes |      9.918.239 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       GZIP       |     On     |          NONE      |||                       73.120 bytes |           97.496 bytes |         99.928 bytes |         99.928 bytes |
+| MTOM  |       GZIP       |     On     |          NONE      |||                       73.120 bytes |           73.120 bytes |         75.975 bytes |         75.975 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       NONE       |     On     |          GZIP      |||                    9.915.384 bytes |       13.220.512 bytes |     13.222.944 bytes |         98.246 bytes |
+| MTOM  |       NONE       |     On     |          GZIP      |||                    9.915.384 bytes |        9.915.384 bytes |      9.918.239 bytes |         59.500 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       GZIP       |     On     |          GZIP      |||                       73.120 bytes |           97.496 bytes |         99.928 bytes |          3.681 bytes |
+| MTOM  |       GZIP       |     On     |          GZIP      |||                       73.120 bytes |           73.120 bytes |         75.975 bytes |          3.682 bytes |
++-------+------------------+------------+--------------------+++------------------------------------+------------------------+----------------------+----------------------+
+
+
+
+====================================================================================================================================================================================
+===== Nutzdaten: a1.pdf (Normales A1 Bewilligungs-PDFf)
+  Größe:    440.388 bytes
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type  | ND-Komprimierung | XML minify | HTTP-Komprimierung ||| Reine Nutzdaten (ggf. komprimiert) | Nutzdaten im Endformat | Vollst. XML inkl. ND | Vollst. HTTP Request |
++-------+------------------+------------+--------------------+++------------------------------------+------------------------+----------------------+----------------------+
+| Extra |       NONE       |     Off    |          NONE      |||                      440.392 bytes |          587.192 bytes |        590.755 bytes |        590.755 bytes |
+| MTOM  |       NONE       |     Off    |          NONE      |||                      440.392 bytes |          440.392 bytes |        444.951 bytes |        444.951 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       NONE       |     On     |          NONE      |||                      440.392 bytes |          587.192 bytes |        589.624 bytes |        589.624 bytes |
+| MTOM  |       NONE       |     On     |          NONE      |||                      440.392 bytes |          440.392 bytes |        443.247 bytes |        443.247 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       GZIP       |     On     |          NONE      |||                      436.151 bytes |          581.536 bytes |        583.968 bytes |        583.968 bytes |
+| MTOM  |       GZIP       |     On     |          NONE      |||                      436.151 bytes |          436.151 bytes |        439.006 bytes |        439.006 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       NONE       |     On     |          GZIP      |||                      440.392 bytes |          587.192 bytes |        589.624 bytes |        443.782 bytes |
+| MTOM  |       NONE       |     On     |          GZIP      |||                      440.392 bytes |          440.392 bytes |        443.247 bytes |        439.573 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       GZIP       |     On     |          GZIP      |||                      436.151 bytes |          581.536 bytes |        583.968 bytes |        441.329 bytes |
+| MTOM  |       GZIP       |     On     |          GZIP      |||                      436.151 bytes |          436.151 bytes |        439.006 bytes |        437.612 bytes |
++-------+------------------+------------+--------------------+++------------------------------------+------------------------+----------------------+----------------------+
+
+
+
+====================================================================================================================================================================================
+===== Nutzdaten: dua-echt.txt (Echt DUA-Meldung mit 889 Meldungen)
+  Größe:    766.828 bytes
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type  | ND-Komprimierung | XML minify | HTTP-Komprimierung ||| Reine Nutzdaten (ggf. komprimiert) | Nutzdaten im Endformat | Vollst. XML inkl. ND | Vollst. HTTP Request |
++-------+------------------+------------+--------------------+++------------------------------------+------------------------+----------------------+----------------------+
+| Extra |       NONE       |     Off    |          NONE      |||                      766.832 bytes |        1.022.444 bytes |      1.026.007 bytes |      1.026.007 bytes |
+| MTOM  |       NONE       |     Off    |          NONE      |||                      766.832 bytes |          766.832 bytes |        771.391 bytes |        771.391 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       NONE       |     On     |          NONE      |||                      766.832 bytes |        1.022.444 bytes |      1.024.876 bytes |      1.024.876 bytes |
+| MTOM  |       NONE       |     On     |          NONE      |||                      766.832 bytes |          766.832 bytes |        769.687 bytes |        769.687 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       GZIP       |     On     |          NONE      |||                       41.563 bytes |           55.420 bytes |         57.852 bytes |         57.852 bytes |
+| MTOM  |       GZIP       |     On     |          NONE      |||                       41.563 bytes |           41.563 bytes |         44.418 bytes |         44.418 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       NONE       |     On     |          GZIP      |||                      766.832 bytes |        1.022.444 bytes |      1.024.876 bytes |        144.235 bytes |
+| MTOM  |       NONE       |     On     |          GZIP      |||                      766.832 bytes |          766.832 bytes |        769.687 bytes |        112.518 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       GZIP       |     On     |          GZIP      |||                       41.563 bytes |           55.420 bytes |         57.852 bytes |         41.704 bytes |
+| MTOM  |       GZIP       |     On     |          GZIP      |||                       41.563 bytes |           41.563 bytes |         44.418 bytes |         40.381 bytes |
++-------+------------------+------------+--------------------+++------------------------------------+------------------------+----------------------+----------------------+
+
+
+
+====================================================================================================================================================================================
+===== Nutzdaten: a1-echt.xml (Echtes A1-Versandpaket mit 7x Bewilligung)
+  Größe: 15.485.716 bytes
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type  | ND-Komprimierung | XML minify | HTTP-Komprimierung ||| Reine Nutzdaten (ggf. komprimiert) | Nutzdaten im Endformat | Vollst. XML inkl. ND | Vollst. HTTP Request |
++-------+------------------+------------+--------------------+++------------------------------------+------------------------+----------------------+----------------------+
+| Extra |       NONE       |     Off    |          NONE      |||                   15.485.720 bytes |       20.647.628 bytes |     20.651.191 bytes |     20.651.191 bytes |
+| MTOM  |       NONE       |     Off    |          NONE      |||                   15.485.720 bytes |       15.485.720 bytes |     15.490.279 bytes |     15.490.279 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       NONE       |     On     |          NONE      |||                   15.485.720 bytes |       20.647.628 bytes |     20.650.060 bytes |     20.650.060 bytes |
+| MTOM  |       NONE       |     On     |          NONE      |||                   15.485.720 bytes |       15.485.720 bytes |     15.488.575 bytes |     15.488.575 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       GZIP       |     On     |          NONE      |||                   11.441.594 bytes |       15.255.460 bytes |     15.257.892 bytes |     15.257.892 bytes |
+| MTOM  |       GZIP       |     On     |          NONE      |||                   11.441.594 bytes |       11.441.594 bytes |     11.444.449 bytes |     11.444.449 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       NONE       |     On     |          GZIP      |||                   15.485.720 bytes |       20.647.628 bytes |     20.650.060 bytes |     15.463.843 bytes |
+| MTOM  |       NONE       |     On     |          GZIP      |||                   15.485.720 bytes |       15.485.720 bytes |     15.488.575 bytes |     15.271.126 bytes |
+|       |                  |            |                    |||                                    |                        |                      |                      |
+| Extra |       GZIP       |     On     |          GZIP      |||                   11.441.594 bytes |       15.255.460 bytes |     15.257.892 bytes |     11.555.963 bytes |
+| MTOM  |       GZIP       |     On     |          GZIP      |||                   11.441.594 bytes |       11.441.594 bytes |     11.444.449 bytes |     11.446.418 bytes |
++-------+------------------+------------+--------------------+++------------------------------------+------------------------+----------------------+----------------------+
+
+Process finished with exit code 0
